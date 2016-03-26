@@ -13,6 +13,12 @@
 		B0B174821CA5ED0300E75822 /* project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0B174801CA5ED0300E75822 /* project.xcdatamodeld */; };
 		B0B174841CA5ED0300E75822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B174831CA5ED0300E75822 /* Assets.xcassets */; };
 		B0B174871CA5ED0300E75822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B174851CA5ED0300E75822 /* LaunchScreen.storyboard */; };
+		B0F086341CA6F42600A49994 /* pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F086331CA6F42600A49994 /* pet.swift */; };
+		B0F086361CA6F43E00A49994 /* food.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F086351CA6F43E00A49994 /* food.swift */; };
+		B0F086381CA6F4A300A49994 /* exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F086371CA6F4A300A49994 /* exercise.swift */; };
+		B0F0863A1CA6F4C500A49994 /* grooming.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F086391CA6F4C500A49994 /* grooming.swift */; };
+		B0F0863C1CA6F4D600A49994 /* vetVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0863B1CA6F4D600A49994 /* vetVisit.swift */; };
+		B0F0863E1CA6F4E600A49994 /* medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0863D1CA6F4E600A49994 /* medicine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		B0B174831CA5ED0300E75822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0B174861CA5ED0300E75822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0B174881CA5ED0300E75822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0F086331CA6F42600A49994 /* pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pet.swift; sourceTree = "<group>"; };
+		B0F086351CA6F43E00A49994 /* food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = food.swift; sourceTree = "<group>"; };
+		B0F086371CA6F4A300A49994 /* exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exercise.swift; sourceTree = "<group>"; };
+		B0F086391CA6F4C500A49994 /* grooming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grooming.swift; sourceTree = "<group>"; };
+		B0F0863B1CA6F4D600A49994 /* vetVisit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vetVisit.swift; sourceTree = "<group>"; };
+		B0F0863D1CA6F4E600A49994 /* medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = medicine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,12 @@
 		B0B174781CA5ED0300E75822 /* project */ = {
 			isa = PBXGroup;
 			children = (
+				B0F086331CA6F42600A49994 /* pet.swift */,
+				B0F086351CA6F43E00A49994 /* food.swift */,
+				B0F086371CA6F4A300A49994 /* exercise.swift */,
+				B0F086391CA6F4C500A49994 /* grooming.swift */,
+				B0F0863B1CA6F4D600A49994 /* vetVisit.swift */,
+				B0F0863D1CA6F4E600A49994 /* medicine.swift */,
 				B0B174791CA5ED0300E75822 /* AppDelegate.swift */,
 				B0B1747B1CA5ED0300E75822 /* ViewController.swift */,
 				B0B1747D1CA5ED0300E75822 /* Main.storyboard */,
@@ -138,9 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F0863E1CA6F4E600A49994 /* medicine.swift in Sources */,
 				B0B1747C1CA5ED0300E75822 /* ViewController.swift in Sources */,
+				B0F086381CA6F4A300A49994 /* exercise.swift in Sources */,
+				B0F086341CA6F42600A49994 /* pet.swift in Sources */,
+				B0F0863A1CA6F4C500A49994 /* grooming.swift in Sources */,
 				B0B174821CA5ED0300E75822 /* project.xcdatamodeld in Sources */,
 				B0B1747A1CA5ED0300E75822 /* AppDelegate.swift in Sources */,
+				B0F086361CA6F43E00A49994 /* food.swift in Sources */,
+				B0F0863C1CA6F4D600A49994 /* vetVisit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +312,7 @@
 				B0B1748D1CA5ED0300E75822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
