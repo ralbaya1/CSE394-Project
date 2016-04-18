@@ -28,6 +28,7 @@
 		B0B174821CA5ED0300E75822 /* project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0B174801CA5ED0300E75822 /* project.xcdatamodeld */; };
 		B0B174841CA5ED0300E75822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B174831CA5ED0300E75822 /* Assets.xcassets */; };
 		B0B174871CA5ED0300E75822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B174851CA5ED0300E75822 /* LaunchScreen.storyboard */; };
+		B8F84EF51CC4A3F00024577A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F84EF41CC4A3F00024577A /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B0B174831CA5ED0300E75822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0B174861CA5ED0300E75822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0B174881CA5ED0300E75822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8F84EF41CC4A3F00024577A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				B0B174881CA5ED0300E75822 /* Info.plist */,
 				B0B174801CA5ED0300E75822 /* project.xcdatamodeld */,
 				41917C381CC27D8600B2AF27 /* GroomViewController.swift */,
+				B8F84EF41CC4A3F00024577A /* MapViewController.swift */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				41A0AB851CC011900051DC7F /* PetOverall.swift in Sources */,
 				B0B1747A1CA5ED0300E75822 /* AppDelegate.swift in Sources */,
 				41A0AB821CC00F8F0051DC7F /* Food+CoreDataProperties.swift in Sources */,
+				B8F84EF51CC4A3F00024577A /* MapViewController.swift in Sources */,
 				41A0AB811CC00F8F0051DC7F /* Vet.swift in Sources */,
 				41A0AB7E1CC00F8F0051DC7F /* Grooming+CoreDataProperties.swift in Sources */,
 				41A0AB7A1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift in Sources */,
