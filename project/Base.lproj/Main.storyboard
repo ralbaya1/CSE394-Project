@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9mE-NH-ewA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9mE-NH-ewA">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -311,6 +311,38 @@
             </objects>
             <point key="canvasLocation" x="343" y="1566"/>
         </scene>
+        <!--MapView-->
+        <scene sceneID="Wym-vB-hKc">
+            <objects>
+                <viewController title="MapView" id="bZd-ra-BK0" customClass="MapViewController" customModule="project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yaA-pJ-Y0w"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z9m-5A-Hyn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JVA-xu-LAu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5lc-MU-u2n">
+                                <rect key="frame" x="0.0" y="117" width="320" height="451"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5lc-MU-u2n" firstAttribute="bottom" secondItem="Z9m-5A-Hyn" secondAttribute="top" id="AQ8-xs-hz2"/>
+                            <constraint firstAttribute="trailing" secondItem="5lc-MU-u2n" secondAttribute="trailing" id="HWk-7A-8tA"/>
+                            <constraint firstItem="5lc-MU-u2n" firstAttribute="top" secondItem="yaA-pJ-Y0w" secondAttribute="bottom" constant="97" id="NWA-9q-YaC"/>
+                            <constraint firstItem="5lc-MU-u2n" firstAttribute="leading" secondItem="JVA-xu-LAu" secondAttribute="leading" id="uIi-fj-ghD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Map" destination="5lc-MU-u2n" id="wPh-Pi-bIf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yVH-PF-Ufm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="1579"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="EhU-tA-0mU">
             <objects>
@@ -436,11 +468,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSL-Vp-Olq">
-                                <rect key="frame" x="20" y="335" width="280" height="152"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qw1-3w-AY9">
                                 <rect key="frame" x="137" y="495" width="47" height="33"/>
                                 <constraints>
@@ -494,6 +521,11 @@
                                     <outlet property="delegate" destination="9mE-NH-ewA" id="2YW-Hd-dg3"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSL-Vp-Olq">
+                                <rect key="frame" x="20" y="335" width="280" height="152"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
