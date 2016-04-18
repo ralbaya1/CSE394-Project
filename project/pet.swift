@@ -1,41 +1,19 @@
 //
-//  pet.swift
+//  Pet.swift
 //  project
 //
-//  Created by Raid on 3/26/16.
+//  Created by Tse on 4/14/16.
 //  Copyright © 2016 Raid. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
-class pet {
-    private var id: Int = 0
-    private var name: String = ""
+
+class Pet: NSManagedObject {
+
+// Insert code here to add functionality to your managed object subclass
     
-    init(petId: Int, petName: String)
-    {
-        id = petId
-        name = petName
-    }
     
-    func setId(petId: Int)
-    {
-        id = petId
-    }
-    
-    func getId()-> Int
-    {
-        return id
-    }
-    
-    func setName (petName: String)
-    {
-        name = petName
-    }
-    
-    func getName() -> String
-    {
-        return name
-    }
-    
+
 }

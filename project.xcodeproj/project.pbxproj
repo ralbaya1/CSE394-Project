@@ -7,21 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41917C391CC27D8600B2AF27 /* GroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41917C381CC27D8600B2AF27 /* GroomViewController.swift */; };
+		41917C3B1CC37A4400B2AF27 /* comb12.png in Resources */ = {isa = PBXBuildFile; fileRef = 41917C3A1CC37A4400B2AF27 /* comb12.png */; };
+		41A0AB781CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB6C1CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift */; };
+		41A0AB791CC00F8F0051DC7F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB6D1CC00F8F0051DC7F /* Exercise.swift */; };
+		41A0AB7A1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB6E1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift */; };
+		41A0AB7B1CC00F8F0051DC7F /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB6F1CC00F8F0051DC7F /* Pet.swift */; };
+		41A0AB7C1CC00F8F0051DC7F /* Medicine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB701CC00F8F0051DC7F /* Medicine+CoreDataProperties.swift */; };
+		41A0AB7D1CC00F8F0051DC7F /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB711CC00F8F0051DC7F /* Medicine.swift */; };
+		41A0AB7E1CC00F8F0051DC7F /* Grooming+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB721CC00F8F0051DC7F /* Grooming+CoreDataProperties.swift */; };
+		41A0AB7F1CC00F8F0051DC7F /* Grooming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB731CC00F8F0051DC7F /* Grooming.swift */; };
+		41A0AB801CC00F8F0051DC7F /* Vet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB741CC00F8F0051DC7F /* Vet+CoreDataProperties.swift */; };
+		41A0AB811CC00F8F0051DC7F /* Vet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB751CC00F8F0051DC7F /* Vet.swift */; };
+		41A0AB821CC00F8F0051DC7F /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB761CC00F8F0051DC7F /* Food+CoreDataProperties.swift */; };
+		41A0AB831CC00F8F0051DC7F /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB771CC00F8F0051DC7F /* Food.swift */; };
+		41A0AB851CC011900051DC7F /* PetOverall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB841CC0118F0051DC7F /* PetOverall.swift */; };
 		B0B1747A1CA5ED0300E75822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B174791CA5ED0300E75822 /* AppDelegate.swift */; };
 		B0B1747C1CA5ED0300E75822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B1747B1CA5ED0300E75822 /* ViewController.swift */; };
 		B0B1747F1CA5ED0300E75822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B1747D1CA5ED0300E75822 /* Main.storyboard */; };
 		B0B174821CA5ED0300E75822 /* project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0B174801CA5ED0300E75822 /* project.xcdatamodeld */; };
 		B0B174841CA5ED0300E75822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B174831CA5ED0300E75822 /* Assets.xcassets */; };
 		B0B174871CA5ED0300E75822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B174851CA5ED0300E75822 /* LaunchScreen.storyboard */; };
-		B0F086341CA6F42600A49994 /* pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F086331CA6F42600A49994 /* pet.swift */; };
-		B0F086361CA6F43E00A49994 /* food.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F086351CA6F43E00A49994 /* food.swift */; };
-		B0F086381CA6F4A300A49994 /* exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F086371CA6F4A300A49994 /* exercise.swift */; };
-		B0F0863A1CA6F4C500A49994 /* grooming.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F086391CA6F4C500A49994 /* grooming.swift */; };
-		B0F0863C1CA6F4D600A49994 /* vetVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0863B1CA6F4D600A49994 /* vetVisit.swift */; };
-		B0F0863E1CA6F4E600A49994 /* medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F0863D1CA6F4E600A49994 /* medicine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41917C381CC27D8600B2AF27 /* GroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroomViewController.swift; sourceTree = "<group>"; };
+		41917C3A1CC37A4400B2AF27 /* comb12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comb12.png; sourceTree = "<group>"; };
+		41A0AB6C1CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Exercise+CoreDataProperties.swift"; path = "project/Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		41A0AB6D1CC00F8F0051DC7F /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = project/Exercise.swift; sourceTree = "<group>"; };
+		41A0AB6E1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pet+CoreDataProperties.swift"; path = "project/Pet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		41A0AB6F1CC00F8F0051DC7F /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pet.swift; path = project/Pet.swift; sourceTree = "<group>"; };
+		41A0AB701CC00F8F0051DC7F /* Medicine+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Medicine+CoreDataProperties.swift"; path = "project/Medicine+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		41A0AB711CC00F8F0051DC7F /* Medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medicine.swift; path = project/Medicine.swift; sourceTree = "<group>"; };
+		41A0AB721CC00F8F0051DC7F /* Grooming+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Grooming+CoreDataProperties.swift"; path = "project/Grooming+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		41A0AB731CC00F8F0051DC7F /* Grooming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Grooming.swift; path = project/Grooming.swift; sourceTree = "<group>"; };
+		41A0AB741CC00F8F0051DC7F /* Vet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Vet+CoreDataProperties.swift"; path = "project/Vet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		41A0AB751CC00F8F0051DC7F /* Vet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vet.swift; path = project/Vet.swift; sourceTree = "<group>"; };
+		41A0AB761CC00F8F0051DC7F /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataProperties.swift"; path = "project/Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		41A0AB771CC00F8F0051DC7F /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Food.swift; path = project/Food.swift; sourceTree = "<group>"; };
+		41A0AB841CC0118F0051DC7F /* PetOverall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetOverall.swift; sourceTree = "<group>"; };
 		B0B174761CA5ED0300E75822 /* project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B174791CA5ED0300E75822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0B1747B1CA5ED0300E75822 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,12 +54,6 @@
 		B0B174831CA5ED0300E75822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0B174861CA5ED0300E75822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0B174881CA5ED0300E75822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0F086331CA6F42600A49994 /* pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pet.swift; sourceTree = "<group>"; };
-		B0F086351CA6F43E00A49994 /* food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = food.swift; sourceTree = "<group>"; };
-		B0F086371CA6F4A300A49994 /* exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exercise.swift; sourceTree = "<group>"; };
-		B0F086391CA6F4C500A49994 /* grooming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grooming.swift; sourceTree = "<group>"; };
-		B0F0863B1CA6F4D600A49994 /* vetVisit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vetVisit.swift; sourceTree = "<group>"; };
-		B0F0863D1CA6F4E600A49994 /* medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = medicine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +70,19 @@
 		B0B1746D1CA5ED0300E75822 = {
 			isa = PBXGroup;
 			children = (
+				41A0AB841CC0118F0051DC7F /* PetOverall.swift */,
+				41A0AB6C1CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift */,
+				41A0AB6D1CC00F8F0051DC7F /* Exercise.swift */,
+				41A0AB6E1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift */,
+				41A0AB6F1CC00F8F0051DC7F /* Pet.swift */,
+				41A0AB701CC00F8F0051DC7F /* Medicine+CoreDataProperties.swift */,
+				41A0AB711CC00F8F0051DC7F /* Medicine.swift */,
+				41A0AB721CC00F8F0051DC7F /* Grooming+CoreDataProperties.swift */,
+				41A0AB731CC00F8F0051DC7F /* Grooming.swift */,
+				41A0AB741CC00F8F0051DC7F /* Vet+CoreDataProperties.swift */,
+				41A0AB751CC00F8F0051DC7F /* Vet.swift */,
+				41A0AB761CC00F8F0051DC7F /* Food+CoreDataProperties.swift */,
+				41A0AB771CC00F8F0051DC7F /* Food.swift */,
 				B0B174781CA5ED0300E75822 /* project */,
 				B0B174771CA5ED0300E75822 /* Products */,
 			);
@@ -68,19 +99,15 @@
 		B0B174781CA5ED0300E75822 /* project */ = {
 			isa = PBXGroup;
 			children = (
-				B0F086331CA6F42600A49994 /* pet.swift */,
-				B0F086351CA6F43E00A49994 /* food.swift */,
-				B0F086371CA6F4A300A49994 /* exercise.swift */,
-				B0F086391CA6F4C500A49994 /* grooming.swift */,
-				B0F0863B1CA6F4D600A49994 /* vetVisit.swift */,
-				B0F0863D1CA6F4E600A49994 /* medicine.swift */,
 				B0B174791CA5ED0300E75822 /* AppDelegate.swift */,
 				B0B1747B1CA5ED0300E75822 /* ViewController.swift */,
 				B0B1747D1CA5ED0300E75822 /* Main.storyboard */,
 				B0B174831CA5ED0300E75822 /* Assets.xcassets */,
+				41917C3A1CC37A4400B2AF27 /* comb12.png */,
 				B0B174851CA5ED0300E75822 /* LaunchScreen.storyboard */,
 				B0B174881CA5ED0300E75822 /* Info.plist */,
 				B0B174801CA5ED0300E75822 /* project.xcdatamodeld */,
+				41917C381CC27D8600B2AF27 /* GroomViewController.swift */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -111,6 +138,10 @@
 		B0B1746E1CA5ED0300E75822 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+				);
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Raid;
@@ -144,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0B174871CA5ED0300E75822 /* LaunchScreen.storyboard in Resources */,
+				41917C3B1CC37A4400B2AF27 /* comb12.png in Resources */,
 				B0B174841CA5ED0300E75822 /* Assets.xcassets in Resources */,
 				B0B1747F1CA5ED0300E75822 /* Main.storyboard in Resources */,
 			);
@@ -156,15 +188,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0F0863E1CA6F4E600A49994 /* medicine.swift in Sources */,
+				41A0AB7B1CC00F8F0051DC7F /* Pet.swift in Sources */,
+				41A0AB7D1CC00F8F0051DC7F /* Medicine.swift in Sources */,
+				41A0AB831CC00F8F0051DC7F /* Food.swift in Sources */,
+				41A0AB791CC00F8F0051DC7F /* Exercise.swift in Sources */,
 				B0B1747C1CA5ED0300E75822 /* ViewController.swift in Sources */,
-				B0F086381CA6F4A300A49994 /* exercise.swift in Sources */,
-				B0F086341CA6F42600A49994 /* pet.swift in Sources */,
-				B0F0863A1CA6F4C500A49994 /* grooming.swift in Sources */,
+				41A0AB781CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift in Sources */,
+				41A0AB801CC00F8F0051DC7F /* Vet+CoreDataProperties.swift in Sources */,
+				41917C391CC27D8600B2AF27 /* GroomViewController.swift in Sources */,
+				41A0AB7F1CC00F8F0051DC7F /* Grooming.swift in Sources */,
 				B0B174821CA5ED0300E75822 /* project.xcdatamodeld in Sources */,
+				41A0AB851CC011900051DC7F /* PetOverall.swift in Sources */,
 				B0B1747A1CA5ED0300E75822 /* AppDelegate.swift in Sources */,
-				B0F086361CA6F43E00A49994 /* food.swift in Sources */,
-				B0F0863C1CA6F4D600A49994 /* vetVisit.swift in Sources */,
+				41A0AB821CC00F8F0051DC7F /* Food+CoreDataProperties.swift in Sources */,
+				41A0AB811CC00F8F0051DC7F /* Vet.swift in Sources */,
+				41A0AB7E1CC00F8F0051DC7F /* Grooming+CoreDataProperties.swift in Sources */,
+				41A0AB7A1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift in Sources */,
+				41A0AB7C1CC00F8F0051DC7F /* Medicine+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  Exercise.swift
+//  Vet.swift
 //  project
 //
 //  Created by Tse on 4/14/16.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Exercise: NSManagedObject {
+class Vet: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 
