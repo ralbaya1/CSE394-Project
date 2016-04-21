@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		41917C391CC27D8600B2AF27 /* GroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41917C381CC27D8600B2AF27 /* GroomViewController.swift */; };
-		41917C3B1CC37A4400B2AF27 /* comb12.png in Resources */ = {isa = PBXBuildFile; fileRef = 41917C3A1CC37A4400B2AF27 /* comb12.png */; };
 		41A0AB781CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB6C1CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift */; };
 		41A0AB791CC00F8F0051DC7F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB6D1CC00F8F0051DC7F /* Exercise.swift */; };
 		41A0AB7A1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB6E1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift */; };
@@ -22,18 +21,26 @@
 		41A0AB821CC00F8F0051DC7F /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB761CC00F8F0051DC7F /* Food+CoreDataProperties.swift */; };
 		41A0AB831CC00F8F0051DC7F /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB771CC00F8F0051DC7F /* Food.swift */; };
 		41A0AB851CC011900051DC7F /* PetOverall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB841CC0118F0051DC7F /* PetOverall.swift */; };
+		B075DD831CC50FA800E9B6D9 /* petRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075DD821CC50FA800E9B6D9 /* petRegistrationViewController.swift */; };
+		B075DD851CC59CD900E9B6D9 /* foodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075DD841CC59CD900E9B6D9 /* foodViewController.swift */; };
+		B075DD871CC5D3FD00E9B6D9 /* sport10.png in Resources */ = {isa = PBXBuildFile; fileRef = B075DD861CC5D3FD00E9B6D9 /* sport10.png */; };
+		B075DD8B1CC5D4A600E9B6D9 /* scissors35.png in Resources */ = {isa = PBXBuildFile; fileRef = B075DD8A1CC5D4A600E9B6D9 /* scissors35.png */; };
+		B075DD8D1CC5D4CB00E9B6D9 /* bones4.png in Resources */ = {isa = PBXBuildFile; fileRef = B075DD8C1CC5D4CB00E9B6D9 /* bones4.png */; };
+		B075DD8F1CC5D52300E9B6D9 /* syringe17.png in Resources */ = {isa = PBXBuildFile; fileRef = B075DD8E1CC5D52300E9B6D9 /* syringe17.png */; };
+		B075DD991CC5D84400E9B6D9 /* vetVisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B075DD981CC5D84400E9B6D9 /* vetVisitViewController.swift */; };
+		B075DD9D1CC5E61300E9B6D9 /* vet.png in Resources */ = {isa = PBXBuildFile; fileRef = B075DD9C1CC5E61300E9B6D9 /* vet.png */; };
 		B0B1747A1CA5ED0300E75822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B174791CA5ED0300E75822 /* AppDelegate.swift */; };
 		B0B1747C1CA5ED0300E75822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B1747B1CA5ED0300E75822 /* ViewController.swift */; };
 		B0B1747F1CA5ED0300E75822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B1747D1CA5ED0300E75822 /* Main.storyboard */; };
 		B0B174821CA5ED0300E75822 /* project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0B174801CA5ED0300E75822 /* project.xcdatamodeld */; };
 		B0B174841CA5ED0300E75822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B174831CA5ED0300E75822 /* Assets.xcassets */; };
 		B0B174871CA5ED0300E75822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B174851CA5ED0300E75822 /* LaunchScreen.storyboard */; };
+		B0D9AA3D1CC6F36E007E232E /* dog-07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B0D9AA3C1CC6F36E007E232E /* dog-07.jpg */; };
 		B8F84EF51CC4A3F00024577A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F84EF41CC4A3F00024577A /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41917C381CC27D8600B2AF27 /* GroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroomViewController.swift; sourceTree = "<group>"; };
-		41917C3A1CC37A4400B2AF27 /* comb12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comb12.png; sourceTree = "<group>"; };
 		41A0AB6C1CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Exercise+CoreDataProperties.swift"; path = "project/Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		41A0AB6D1CC00F8F0051DC7F /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = project/Exercise.swift; sourceTree = "<group>"; };
 		41A0AB6E1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pet+CoreDataProperties.swift"; path = "project/Pet+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -47,6 +54,14 @@
 		41A0AB761CC00F8F0051DC7F /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataProperties.swift"; path = "project/Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		41A0AB771CC00F8F0051DC7F /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Food.swift; path = project/Food.swift; sourceTree = "<group>"; };
 		41A0AB841CC0118F0051DC7F /* PetOverall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetOverall.swift; sourceTree = "<group>"; };
+		B075DD821CC50FA800E9B6D9 /* petRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = petRegistrationViewController.swift; sourceTree = "<group>"; };
+		B075DD841CC59CD900E9B6D9 /* foodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodViewController.swift; sourceTree = "<group>"; };
+		B075DD861CC5D3FD00E9B6D9 /* sport10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sport10.png; sourceTree = "<group>"; };
+		B075DD8A1CC5D4A600E9B6D9 /* scissors35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scissors35.png; sourceTree = "<group>"; };
+		B075DD8C1CC5D4CB00E9B6D9 /* bones4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bones4.png; sourceTree = "<group>"; };
+		B075DD8E1CC5D52300E9B6D9 /* syringe17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = syringe17.png; sourceTree = "<group>"; };
+		B075DD981CC5D84400E9B6D9 /* vetVisitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vetVisitViewController.swift; sourceTree = "<group>"; };
+		B075DD9C1CC5E61300E9B6D9 /* vet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vet.png; sourceTree = "<group>"; };
 		B0B174761CA5ED0300E75822 /* project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B174791CA5ED0300E75822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0B1747B1CA5ED0300E75822 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +70,7 @@
 		B0B174831CA5ED0300E75822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0B174861CA5ED0300E75822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0B174881CA5ED0300E75822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0D9AA3C1CC6F36E007E232E /* dog-07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dog-07.jpg"; sourceTree = "<group>"; };
 		B8F84EF41CC4A3F00024577A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,12 +121,20 @@
 				B0B1747B1CA5ED0300E75822 /* ViewController.swift */,
 				B0B1747D1CA5ED0300E75822 /* Main.storyboard */,
 				B0B174831CA5ED0300E75822 /* Assets.xcassets */,
-				41917C3A1CC37A4400B2AF27 /* comb12.png */,
+				B0D9AA3C1CC6F36E007E232E /* dog-07.jpg */,
+				B075DD9C1CC5E61300E9B6D9 /* vet.png */,
+				B075DD8E1CC5D52300E9B6D9 /* syringe17.png */,
+				B075DD8C1CC5D4CB00E9B6D9 /* bones4.png */,
+				B075DD8A1CC5D4A600E9B6D9 /* scissors35.png */,
+				B075DD861CC5D3FD00E9B6D9 /* sport10.png */,
 				B0B174851CA5ED0300E75822 /* LaunchScreen.storyboard */,
 				B0B174881CA5ED0300E75822 /* Info.plist */,
 				B0B174801CA5ED0300E75822 /* project.xcdatamodeld */,
 				41917C381CC27D8600B2AF27 /* GroomViewController.swift */,
 				B8F84EF41CC4A3F00024577A /* MapViewController.swift */,
+				B075DD821CC50FA800E9B6D9 /* petRegistrationViewController.swift */,
+				B075DD841CC59CD900E9B6D9 /* foodViewController.swift */,
+				B075DD981CC5D84400E9B6D9 /* vetVisitViewController.swift */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -177,10 +201,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B075DD9D1CC5E61300E9B6D9 /* vet.png in Resources */,
 				B0B174871CA5ED0300E75822 /* LaunchScreen.storyboard in Resources */,
-				41917C3B1CC37A4400B2AF27 /* comb12.png in Resources */,
+				B075DD8D1CC5D4CB00E9B6D9 /* bones4.png in Resources */,
+				B075DD8B1CC5D4A600E9B6D9 /* scissors35.png in Resources */,
+				B075DD8F1CC5D52300E9B6D9 /* syringe17.png in Resources */,
 				B0B174841CA5ED0300E75822 /* Assets.xcassets in Resources */,
+				B0D9AA3D1CC6F36E007E232E /* dog-07.jpg in Resources */,
 				B0B1747F1CA5ED0300E75822 /* Main.storyboard in Resources */,
+				B075DD871CC5D3FD00E9B6D9 /* sport10.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,9 +234,12 @@
 				B0B1747A1CA5ED0300E75822 /* AppDelegate.swift in Sources */,
 				41A0AB821CC00F8F0051DC7F /* Food+CoreDataProperties.swift in Sources */,
 				B8F84EF51CC4A3F00024577A /* MapViewController.swift in Sources */,
+				B075DD851CC59CD900E9B6D9 /* foodViewController.swift in Sources */,
 				41A0AB811CC00F8F0051DC7F /* Vet.swift in Sources */,
 				41A0AB7E1CC00F8F0051DC7F /* Grooming+CoreDataProperties.swift in Sources */,
+				B075DD831CC50FA800E9B6D9 /* petRegistrationViewController.swift in Sources */,
 				41A0AB7A1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift in Sources */,
+				B075DD991CC5D84400E9B6D9 /* vetVisitViewController.swift in Sources */,
 				41A0AB7C1CC00F8F0051DC7F /* Medicine+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,24 +1,28 @@
 //
-//  GroomViewController.swift
+//  foodViewController.swift
 //  project
 //
-//  Created by Tse on 4/16/16.
+//  Created by Raid on 4/18/16.
 //  Copyright © 2016 Raid. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,UINavigationControllerDelegate {
-    //////////
-    @IBOutlet weak var groomTableView: UITableView!
+class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,UINavigationControllerDelegate {
     
-    @IBOutlet weak var groomingCommentsText: UITextField!
+    
+    @IBOutlet weak var foodType: UITextField!
+    
+    @IBOutlet weak var quantityValue: UITextField!
+    
+    @IBOutlet weak var foodTableView: UITableView!
+    
     
     //a fetch variable
     var dataViewController: NSFetchedResultsController = NSFetchedResultsController()
     
-    var grooming:Grooming? = nil
+    var food:Food? = nil
     
     var context: NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
@@ -32,9 +36,9 @@ class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,
     func listFetchRequest() -> NSFetchRequest
     {
         //identified entity to fetch
-        let fetchRequest = NSFetchRequest(entityName: "Grooming")
+        let fetchRequest = NSFetchRequest(entityName: "Food")
         //sorted by date
-        let sortDescripter = NSSortDescriptor(key: "date", ascending: false)
+        let sortDescripter = NSSortDescriptor(key: "time_Eaten", ascending: false)
         fetchRequest.sortDescriptors = [sortDescripter]
         return fetchRequest
         
@@ -56,7 +60,7 @@ class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,
             try dataViewController.performFetch()
         } catch _ {
         }
-
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -70,25 +74,26 @@ class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.groomTableView.dequeueReusableCellWithIdentifier("groomCell", forIndexPath: indexPath)
-        let groomingInfo = dataViewController.objectAtIndexPath(indexPath) as! Grooming
-        let comment = groomingInfo.comment
-        let groomDate = groomingInfo.date
+        let cell = self.foodTableView.dequeueReusableCellWithIdentifier("foodCell", forIndexPath: indexPath)
+        let foodInfo = dataViewController.objectAtIndexPath(indexPath) as! Food
+        let type = foodInfo.type
+        let date = foodInfo.time_Eaten
+        let quant = foodInfo.quantity
         
         //formating the date
         //var todaysDate:NSDate = NSDate()
         let dateFormatter:NSDateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
-        let DateInFormat:String = dateFormatter.stringFromDate(groomDate!)
+        let DateInFormat:String = dateFormatter.stringFromDate(date!)
         
         // after assign tags to each label in text the labels are assigned
-        let dateLabl = cell.contentView.viewWithTag(1) as! UILabel
-        let commLbl = cell.contentView.viewWithTag(2) as! UILabel
+        let dateLabl = cell.contentView.viewWithTag(4) as! UILabel
+        let fType = cell.contentView.viewWithTag(3) as! UILabel
+        
+        
         dateLabl.text = "\(DateInFormat)"
-        commLbl.text = comment
-        //dateLabl.text = "\(groomDate)"
-        //commLbl.text = comment
-    
+        fType.text = type! + String(quant)
+        
         return cell
         
     }
@@ -100,7 +105,7 @@ class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,
     
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle:   UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            let record = dataViewController.objectAtIndexPath(indexPath) as! Grooming
+            let record = dataViewController.objectAtIndexPath(indexPath) as! Food
             context.deleteObject(record)
             do {
                 try context.save()
@@ -109,39 +114,41 @@ class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,
             
         }
     }
-   
-    // When groom button is pressed the time the pet is groomed and the 
-    // comments are stored.
-    @IBAction func onGroomButton(sender: UIButton)
-    {
-        if let comment = groomingCommentsText.text
+    
+    // When Feed button is pressed the time the pet is Feed and the
+    // type and quantity are stored.
+
+    @IBAction func feed(sender: UIButton) {
+        if let fType = foodType.text
         {
-            let ent = NSEntityDescription.entityForName("Grooming", inManagedObjectContext: self.context)
+            let ent = NSEntityDescription.entityForName("Food", inManagedObjectContext: self.context)
             
-            let newItem = Grooming(entity: ent!, insertIntoManagedObjectContext: self.context)
+            let newItem = Food(entity: ent!, insertIntoManagedObjectContext: self.context)
             
-            newItem.comment = comment
+            newItem.type = fType
             
-            newItem.date = NSDate()
+            newItem.quantity = Int(quantityValue.text!)
+            
+            newItem.time_Eaten = NSDate()
             
             /*if let navController = self.navigationController {
-                navController.popViewControllerAnimated(true)
-            }*/
+             navController.popViewControllerAnimated(true)
+             }*/
             do {
                 try context.save()
             } catch _ {
             }
-
+            
         }
         
     }
     
     
-
+    
     //reload tableview if data changed.
     func controllerDidChangeContent(controller: NSFetchedResultsController)
     {
-        self.groomTableView.reloadData()
+        self.foodTableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -149,6 +156,5 @@ class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-    
-}
 
+}
