@@ -1,28 +1,23 @@
 //
-//  foodViewController.swift
+//  MedicineViewController.swift
 //  project
 //
-//  Created by Raid on 4/18/16.
+//  Created by Tse on 4/23/16.
 //  Copyright © 2016 Raid. All rights reserved.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
-class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,UINavigationControllerDelegate {
-    
-    
-    @IBOutlet weak var foodType: UITextField!
-    
-    @IBOutlet weak var quantityValue: UITextField!
-    
-    @IBOutlet weak var foodTableView: UITableView!
-    
-    
-    //a fetch variable
+class MedicineViewController: UIViewController,NSFetchedResultsControllerDelegate,UINavigationControllerDelegate
+{
+    @IBOutlet weak var medicineHistoryTable: UITableView!
     var dataViewController: NSFetchedResultsController = NSFetchedResultsController()
     
-    var food:Food? = nil
+    @IBOutlet weak var instructionField: UITextField!
+    @IBOutlet weak var freqField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
+    var medicine:Medicine? = nil
     
     var context: NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
@@ -36,9 +31,9 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
     func listFetchRequest() -> NSFetchRequest
     {
         //identified entity to fetch
-        let fetchRequest = NSFetchRequest(entityName: "Food")
+        let fetchRequest = NSFetchRequest(entityName: "Medicine")
         //sorted by date
-        let sortDescripter = NSSortDescriptor(key: "time_Eaten", ascending: false)
+        let sortDescripter = NSSortDescriptor(key: "timeTaken", ascending: false)
         fetchRequest.sortDescriptors = [sortDescripter]
         return fetchRequest
         
@@ -48,9 +43,7 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let calender = NSCalendar.currentCalendar()
-        //print(calender)
-        // Do any additional setup after loading the view, typically from a nib.
+        
         //setup datacontroller
         dataViewController = getFetchResultsController()
         // use data controller to fetch
@@ -74,25 +67,24 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.foodTableView.dequeueReusableCellWithIdentifier("foodCell", forIndexPath: indexPath)
-        let foodInfo = dataViewController.objectAtIndexPath(indexPath) as! Food
-        let type = foodInfo.type
-        let date = foodInfo.time_Eaten
-        let quant = foodInfo.quantity
+        let cell = self.medicineHistoryTable.dequeueReusableCellWithIdentifier("medicineCell", forIndexPath: indexPath)
+        let medicineInfo = dataViewController.objectAtIndexPath(indexPath) as! Medicine
+        let inst = medicineInfo.instruction
+        let freq = medicineInfo.frequency
+        let time = medicineInfo.timeTaken
+        let name = medicineInfo.name
         
         //formating the date
-        //var todaysDate:NSDate = NSDate()
         let dateFormatter:NSDateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
-        let DateInFormat:String = dateFormatter.stringFromDate(date!)
+        let DateInFormat:String = dateFormatter.stringFromDate(time!)
         
         // after assign tags to each label in text the labels are assigned
-        let dateLabl = cell.contentView.viewWithTag(4) as! UILabel
-        let fType = cell.contentView.viewWithTag(3) as! UILabel
+        let nameLbl = cell.contentView.viewWithTag(20) as! UILabel
+        let timeLabel = cell.contentView.viewWithTag(30) as! UILabel
+        timeLabel.text = "\(DateInFormat)"
+        nameLbl.text = name!
         
-        
-        dateLabl.text = "\(DateInFormat)"
-        fType.text = type! + String(quant)
         
         return cell
         
@@ -102,10 +94,10 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
     func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
         return true
     }
-    
+    //delete the cell that is swiped left
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle:   UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            let record = dataViewController.objectAtIndexPath(indexPath) as! Food
+            let record = dataViewController.objectAtIndexPath(indexPath) as! Medicine
             context.deleteObject(record)
             do {
                 try context.save()
@@ -115,34 +107,34 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
         }
     }
     
-    // When Feed button is pressed the time the pet is Feed and the
-    // type and quantity are stored.
-
-    @IBAction func feed(sender: UIButton)
+    
+    @IBAction func onAddMedButton(sender: AnyObject)
     {
-        if let fType = foodType.text
-        {
-            let ent = NSEntityDescription.entityForName("Food", inManagedObjectContext: self.context)
-            
-            let newItem = Food(entity: ent!, insertIntoManagedObjectContext: self.context)
-            
-            newItem.type = fType
-            
-            newItem.quantity = Int(quantityValue.text!)!
-            
-            newItem.time_Eaten = NSDate()
-            
 
+        if let name = nameField.text
+        {
+            let ent = NSEntityDescription.entityForName("Medicine", inManagedObjectContext: self.context)
+            
+            let newItem = Medicine(entity: ent!, insertIntoManagedObjectContext: self.context)
+            
+            newItem.name = name
+            
+            newItem.timeTaken = NSDate()
+            newItem.frequency = Int(freqField.text!)
+            newItem.instruction = instructionField.text!
+            print("\(newItem.frequency!)")
+            
             do {
                 try context.save()
             } catch _ {
             }
+            // pop the view and go back to activities pages after saving
+            
             if let navController = self.navigationController {
                 navController.popViewControllerAnimated(true)
             }
             
         }
-        
     }
     
     
@@ -150,13 +142,12 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
     //reload tableview if data changed.
     func controllerDidChangeContent(controller: NSFetchedResultsController)
     {
-        self.foodTableView.reloadData()
+        self.medicineHistoryTable.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
 }

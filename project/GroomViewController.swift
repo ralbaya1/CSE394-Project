@@ -44,9 +44,7 @@ class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let calender = NSCalendar.currentCalendar()
-        //print(calender)
-        // Do any additional setup after loading the view, typically from a nib.
+
         //setup datacontroller
         dataViewController = getFetchResultsController()
         // use data controller to fetch
@@ -124,12 +122,14 @@ class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,
             
             newItem.date = NSDate()
             
-            /*if let navController = self.navigationController {
-                navController.popViewControllerAnimated(true)
-            }*/
             do {
                 try context.save()
             } catch _ {
+            }
+            // pop the view and go back to activities pages after saving
+            
+            if let navController = self.navigationController {
+                navController.popViewControllerAnimated(true)
             }
 
         }
