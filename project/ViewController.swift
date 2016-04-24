@@ -40,13 +40,7 @@ class ViewController: UIViewController,NSFetchedResultsControllerDelegate {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        // dataViewController = getFetchResultsController()
-        // use data controller to fetch
+    override func viewWillAppear(animated: Bool) {
         let fetchRequest = NSFetchRequest(entityName: "Pet")
         
         if  let fetchResults = (try? context.executeFetchRequest(fetchRequest)) as? [Pet]
@@ -54,27 +48,28 @@ class ViewController: UIViewController,NSFetchedResultsControllerDelegate {
             
             
             let x = fetchResults.count
-            
-            
-            
-            print(x)
             if x != 0 {
                 
                 let petInfo = fetchResults[0]
                 self.petImage.image = UIImage(data: petInfo.picture!  as NSData)
                 self.petName.text = petInfo.name
-
+                
                 petImage.image = UIImage(data: petInfo.picture!  as NSData)
                 petName.text = petInfo.name
             }
             else
             {
-                self.performSegueWithIdentifier("firstTimeUser", sender: nil)
+                self.performSegueWithIdentifier("firstTime", sender: nil)
             }
             
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
-
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -104,6 +99,6 @@ class ViewController: UIViewController,NSFetchedResultsControllerDelegate {
         }
         
     }
-
-
+    
+    
 }

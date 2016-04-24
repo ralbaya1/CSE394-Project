@@ -15,18 +15,64 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet weak var Map: MKMapView!
     
     let locationManager = CLLocationManager()
+    var searchFor:String?
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        /*
+         self.locationManager.requestWhenInUseAuthorization()
+         self.locationManager.delegate = self
+         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+         
+         self.locationManager.startUpdatingLocation()
+         self.Map.showsUserLocation = true*/
         
-        self.locationManager.startUpdatingLocation()
-        self.Map.showsUserLocation = true
+        // set the map to phoenix
+        let lon : CLLocationDegrees = -112.06
+        
+        let lat : CLLocationDegrees = 33.45
+        
+        let coordinates = CLLocationCoordinate2D( latitude: lat, longitude: lon)
+        let span: MKCoordinateSpan = MKCoordinateSpanMake(0.05, 0.05)
+        
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(coordinates, span)
+        
+        
+        self.Map.setRegion(region, animated: true)
+        //searchFor = "vet clinic"
+        //search for the correct search
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = searchFor!
+        request.region = Map.region
+        
+        
+        let search = MKLocalSearch(request: request)
+        search.startWithCompletionHandler { response, error in
+            guard let response = response else {
+                print("There was an error searching for: \(request.naturalLanguageQuery) error: \(error)")
+                return
+            }
+            
+            for item in response.mapItems {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = item.placemark.coordinate;
+                annotation.title      = item.name;
+                annotation.subtitle   = item.placemark.title;
+                self.Map.addAnnotation(annotation)
+                
+                print(item.name!)
+            }
+            
+            
+        }
+        
+        
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,6 +95,4 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     {
         print("Errors: " + error.localizedDescription)
     }
-    
-    
 }

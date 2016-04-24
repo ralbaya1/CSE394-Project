@@ -59,13 +59,13 @@ class petRegistrationViewController: UIViewController ,NSFetchedResultsControlle
         
         if  let fetchResults = (try? context.executeFetchRequest(fetchRequest)) as? [Pet]
         {
-            // if there is a
+            // if there is a valid name it saves the attributes
             if let name = petName.text
             {
                 let x = fetchResults.count
                 // if the fetched is not empty update the image
                 if x != 0 {
-                
+                    
                     let petInfo = fetchResults[0]
                     petInfo.name = name
                     //convert image to NSData then save to coredata
@@ -74,26 +74,34 @@ class petRegistrationViewController: UIViewController ,NSFetchedResultsControlle
                     do {
                         try context.save()
                     } catch _ {}
+                    // then go back to different view
+                    if let navController = self.navigationController
+                    {
+                        navController.popViewControllerAnimated(true)
+                    }
                 }
-                // if the coredata is empty then save as first time user and go back to homepage
+                    // if the coredata is empty then save as first time user and go back to homepage
                 else
                 {
                     let ent = NSEntityDescription.entityForName("Pet", inManagedObjectContext: self.context)
-                
+                    
                     let newItem = Pet(entity: ent!, insertIntoManagedObjectContext: self.context)
-                
+                    
                     newItem.name = name
                     //convert image to NSData then save to coredata
                     let imageData = UIImagePNGRepresentation(petImage.image!)
-                
+                    
                     newItem.picture = imageData!
-                
+                    
                     do {
                         try context.save()
                     } catch _ {
                     }
                     // after saving go to homepage
-                    self.performSegueWithIdentifier("firstTimeUser", sender: nil)
+                    if let navController = self.navigationController
+                    {
+                        navController.popViewControllerAnimated(true)
+                    }
                 }
             }
             
@@ -136,16 +144,12 @@ class petRegistrationViewController: UIViewController ,NSFetchedResultsControlle
         
     }
     
-    override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if segue.identifier == "edit"
-        {
-            let dest: petRegistrationViewController =  segue.destinationViewController as! petRegistrationViewController
-            dest.pName = petName.text
-            dest.pImage = petImage.image
-            
-        }
-        
-    }
+    /*override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     
+     let dest: petRegistrationViewController =  segue.destinationViewController as! petRegistrationViewController
+     dest.pName = petName.text
+     dest.pImage = petImage.image
+     
+     }*/
 
 }

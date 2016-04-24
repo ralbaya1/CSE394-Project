@@ -142,12 +142,21 @@ class vetVisitViewController: UIViewController ,NSFetchedResultsControllerDelega
     
     override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let dest: vetVisitDetailedViewController =  segue.destinationViewController as! vetVisitDetailedViewController
-        let indexPath = vetHistoryTable.indexPathForCell(sender as! UITableViewCell)
-        let cell = dataViewController.objectAtIndexPath(indexPath!) as! Vet
+        if segue.identifier == "mapSeg"
+        {
+            let dest: MapViewController =  segue.destinationViewController as! MapViewController
+            dest.searchFor = "Vet clinic"
+        }
+        else
+        {
         
-        dest.add = cell.address
-        dest.com = cell.comment
+            let dest: vetVisitDetailedViewController =  segue.destinationViewController as! vetVisitDetailedViewController
+            let indexPath = vetHistoryTable.indexPathForCell(sender as! UITableViewCell)
+            let cell = dataViewController.objectAtIndexPath(indexPath!) as! Vet
+        
+            dest.add = cell.address
+            dest.com = cell.comment
+        }
         
         
     }
