@@ -80,10 +80,10 @@ class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,
         let DateInFormat:String = dateFormatter.stringFromDate(groomDate!)
         
         // after assign tags to each label in text the labels are assigned
-        let dateLabl = cell.contentView.viewWithTag(1) as! UILabel
-        let commLbl = cell.contentView.viewWithTag(2) as! UILabel
+        let dateLabl = cell.contentView.viewWithTag(2) as! UILabel
+        //let commLbl = cell.contentView.viewWithTag(1) as! UILabel
         dateLabl.text = "\(DateInFormat)"
-        commLbl.text = comment
+        //commLbl.text = comment
         //dateLabl.text = "\(groomDate)"
         //commLbl.text = comment
     
@@ -136,6 +136,18 @@ class GroomViewController: UIViewController ,NSFetchedResultsControllerDelegate,
         
     }
     
+    
+    override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let dest: groomDetailedViewController =  segue.destinationViewController as! groomDetailedViewController
+        let indexPath = groomTableView.indexPathForCell(sender as! UITableViewCell)
+        let cell = dataViewController.objectAtIndexPath(indexPath!) as! Grooming
+        
+        dest.comment = cell.comment
+
+        
+        
+    }
     
 
     //reload tableview if data changed.

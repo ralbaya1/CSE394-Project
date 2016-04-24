@@ -17,8 +17,7 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
     @IBOutlet weak var quantityValue: UITextField!
     
     @IBOutlet weak var foodTableView: UITableView!
-    
-    
+
     //a fetch variable
     var dataViewController: NSFetchedResultsController = NSFetchedResultsController()
     
@@ -55,6 +54,8 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
         dataViewController = getFetchResultsController()
         // use data controller to fetch
         
+        
+        
         dataViewController.delegate = self
         do {
             try dataViewController.performFetch()
@@ -76,9 +77,9 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.foodTableView.dequeueReusableCellWithIdentifier("foodCell", forIndexPath: indexPath)
         let foodInfo = dataViewController.objectAtIndexPath(indexPath) as! Food
-        let type = foodInfo.type
+        //let type = foodInfo.type
         let date = foodInfo.time_Eaten
-        let quant = foodInfo.quantity
+        //let quant = foodInfo.quantity
         
         //formating the date
         //var todaysDate:NSDate = NSDate()
@@ -87,12 +88,14 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
         let DateInFormat:String = dateFormatter.stringFromDate(date!)
         
         // after assign tags to each label in text the labels are assigned
-        let dateLabl = cell.contentView.viewWithTag(4) as! UILabel
-        let fType = cell.contentView.viewWithTag(3) as! UILabel
-        
+        let dateLabl = cell.contentView.viewWithTag(3) as! UILabel
+        //let fType = cell.contentView.viewWithTag(4) as! UILabel
+        //let foodQuant = cell.contentView.viewWithTag(5) as! UILabel
         
         dateLabl.text = "\(DateInFormat)"
-        fType.text = type! + String(quant)
+        //fType.text = type!
+        //foodQuant.text = String(quant!) + " Cups"
+        
         
         return cell
         
@@ -115,6 +118,7 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
         }
     }
     
+    
     // When Feed button is pressed the time the pet is Feed and the
     // type and quantity are stored.
 
@@ -125,6 +129,8 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
             let ent = NSEntityDescription.entityForName("Food", inManagedObjectContext: self.context)
             
             let newItem = Food(entity: ent!, insertIntoManagedObjectContext: self.context)
+            
+            
             
             newItem.type = fType
             
@@ -145,6 +151,18 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
         
     }
     
+    
+    override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let dest: foodDetailedViewController =  segue.destinationViewController as! foodDetailedViewController
+        let indexPath = foodTableView.indexPathForCell(sender as! UITableViewCell)
+        let cell = dataViewController.objectAtIndexPath(indexPath!) as! Food
+        
+        dest.fType = cell.type
+        dest.quan = Int(cell.quantity!)
+            
+
+    }
     
     
     //reload tableview if data changed.

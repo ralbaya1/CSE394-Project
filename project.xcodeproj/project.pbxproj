@@ -38,6 +38,11 @@
 		B0B174841CA5ED0300E75822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B174831CA5ED0300E75822 /* Assets.xcassets */; };
 		B0B174871CA5ED0300E75822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B174851CA5ED0300E75822 /* LaunchScreen.storyboard */; };
 		B0D9AA3D1CC6F36E007E232E /* dog-07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B0D9AA3C1CC6F36E007E232E /* dog-07.jpg */; };
+		B0FD59B71CCC668C00ADED16 /* foodDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD59B61CCC668C00ADED16 /* foodDetailedViewController.swift */; };
+		B0FD59B91CCC831700ADED16 /* vetVisitDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD59B81CCC831700ADED16 /* vetVisitDetailedViewController.swift */; };
+		B0FD59BB1CCC862F00ADED16 /* medicineDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD59BA1CCC862F00ADED16 /* medicineDetailedViewController.swift */; };
+		B0FD59BD1CCC8A8600ADED16 /* excerciseDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD59BC1CCC8A8600ADED16 /* excerciseDetailedViewController.swift */; };
+		B0FD59BF1CCC8DBF00ADED16 /* groomDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD59BE1CCC8DBF00ADED16 /* groomDetailedViewController.swift */; };
 		B8F84EF51CC4A3F00024577A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F84EF41CC4A3F00024577A /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +80,11 @@
 		B0B174861CA5ED0300E75822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0B174881CA5ED0300E75822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0D9AA3C1CC6F36E007E232E /* dog-07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dog-07.jpg"; sourceTree = "<group>"; };
+		B0FD59B61CCC668C00ADED16 /* foodDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodDetailedViewController.swift; sourceTree = "<group>"; };
+		B0FD59B81CCC831700ADED16 /* vetVisitDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vetVisitDetailedViewController.swift; sourceTree = "<group>"; };
+		B0FD59BA1CCC862F00ADED16 /* medicineDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = medicineDetailedViewController.swift; sourceTree = "<group>"; };
+		B0FD59BC1CCC8A8600ADED16 /* excerciseDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = excerciseDetailedViewController.swift; sourceTree = "<group>"; };
+		B0FD59BE1CCC8DBF00ADED16 /* groomDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groomDetailedViewController.swift; sourceTree = "<group>"; };
 		B8F84EF41CC4A3F00024577A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +151,11 @@
 				B075DD981CC5D84400E9B6D9 /* vetVisitViewController.swift */,
 				419974DC1CCB820100CCF829 /* ExerciseViewController.swift */,
 				419974DE1CCB99E600CCF829 /* MedicineViewController.swift */,
+				B0FD59B61CCC668C00ADED16 /* foodDetailedViewController.swift */,
+				B0FD59B81CCC831700ADED16 /* vetVisitDetailedViewController.swift */,
+				B0FD59BA1CCC862F00ADED16 /* medicineDetailedViewController.swift */,
+				B0FD59BC1CCC8A8600ADED16 /* excerciseDetailedViewController.swift */,
+				B0FD59BE1CCC8DBF00ADED16 /* groomDetailedViewController.swift */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -235,6 +250,8 @@
 				B0B1747C1CA5ED0300E75822 /* ViewController.swift in Sources */,
 				41A0AB781CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift in Sources */,
 				41A0AB801CC00F8F0051DC7F /* Vet+CoreDataProperties.swift in Sources */,
+				B0FD59BF1CCC8DBF00ADED16 /* groomDetailedViewController.swift in Sources */,
+				B0FD59BD1CCC8A8600ADED16 /* excerciseDetailedViewController.swift in Sources */,
 				41917C391CC27D8600B2AF27 /* GroomViewController.swift in Sources */,
 				41A0AB7F1CC00F8F0051DC7F /* Grooming.swift in Sources */,
 				B0B174821CA5ED0300E75822 /* project.xcdatamodeld in Sources */,
@@ -244,8 +261,11 @@
 				B8F84EF51CC4A3F00024577A /* MapViewController.swift in Sources */,
 				B075DD851CC59CD900E9B6D9 /* foodViewController.swift in Sources */,
 				41A0AB811CC00F8F0051DC7F /* Vet.swift in Sources */,
+				B0FD59B91CCC831700ADED16 /* vetVisitDetailedViewController.swift in Sources */,
 				41A0AB7E1CC00F8F0051DC7F /* Grooming+CoreDataProperties.swift in Sources */,
 				B075DD831CC50FA800E9B6D9 /* petRegistrationViewController.swift in Sources */,
+				B0FD59B71CCC668C00ADED16 /* foodDetailedViewController.swift in Sources */,
+				B0FD59BB1CCC862F00ADED16 /* medicineDetailedViewController.swift in Sources */,
 				41A0AB7A1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift in Sources */,
 				B075DD991CC5D84400E9B6D9 /* vetVisitViewController.swift in Sources */,
 				41A0AB7C1CC00F8F0051DC7F /* Medicine+CoreDataProperties.swift in Sources */,

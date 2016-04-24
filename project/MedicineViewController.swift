@@ -137,7 +137,18 @@ class MedicineViewController: UIViewController,NSFetchedResultsControllerDelegat
         }
     }
     
-    
+    override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let dest: medicineDetailedViewController =  segue.destinationViewController as! medicineDetailedViewController
+        let indexPath = medicineHistoryTable.indexPathForCell(sender as! UITableViewCell)
+        let cell = dataViewController.objectAtIndexPath(indexPath!) as! Medicine
+        
+        dest.medName = cell.name
+        dest.frequency = Int(cell.frequency!)
+        dest.instruction = cell.instruction
+        
+        
+    }
     
     //reload tableview if data changed.
     func controllerDidChangeContent(controller: NSFetchedResultsController)

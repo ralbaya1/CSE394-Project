@@ -72,8 +72,8 @@ class ExerciseViewController: UIViewController,NSFetchedResultsControllerDelegat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.exerciseHistoryTable.dequeueReusableCellWithIdentifier("exerciseCell", forIndexPath: indexPath)
         let exerciseInfo = dataViewController.objectAtIndexPath(indexPath) as! Exercise
-        let duration = exerciseInfo.duration
-        let desc = exerciseInfo.discription
+        //let duration = exerciseInfo.duration
+        //let desc = exerciseInfo.discription
         let time = exerciseInfo.time
         
         //formating the date
@@ -82,10 +82,10 @@ class ExerciseViewController: UIViewController,NSFetchedResultsControllerDelegat
         let DateInFormat:String = dateFormatter.stringFromDate(time!)
         
         // after assign tags to each label in text the labels are assigned
-        let descLabel = cell.contentView.viewWithTag(5) as! UILabel
-        let timeLabel = cell.contentView.viewWithTag(6) as! UILabel
+        //let descLabel = cell.contentView.viewWithTag(5) as! UILabel
+        let timeLabel = cell.contentView.viewWithTag(5) as! UILabel
         timeLabel.text = "\(DateInFormat)"
-        descLabel.text = desc!
+        //descLabel.text = desc!
    
         
         return cell
@@ -137,6 +137,16 @@ class ExerciseViewController: UIViewController,NSFetchedResultsControllerDelegat
         }
     }
     
+    override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let dest: excerciseDetailedViewController =  segue.destinationViewController as! excerciseDetailedViewController
+        let indexPath = exerciseHistoryTable.indexPathForCell(sender as! UITableViewCell)
+        let cell = dataViewController.objectAtIndexPath(indexPath!) as! Exercise
+        
+        dest.dur = Int(cell.duration!)
+        dest.desc = cell.discription
+        
+    }
     
     
     //reload tableview if data changed.

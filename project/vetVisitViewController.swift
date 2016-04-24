@@ -85,7 +85,7 @@ class vetVisitViewController: UIViewController ,NSFetchedResultsControllerDelega
         let dateLabl = cell.contentView.viewWithTag(8) as! UILabel
         let addLbl = cell.contentView.viewWithTag(9) as! UILabel
         dateLabl.text = "\(DateInFormat)"
-        addLbl.text = address
+        addLbl.text = ""
 
         
         return cell
@@ -140,6 +140,17 @@ class vetVisitViewController: UIViewController ,NSFetchedResultsControllerDelega
         
     }
     
+    override func  prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let dest: vetVisitDetailedViewController =  segue.destinationViewController as! vetVisitDetailedViewController
+        let indexPath = vetHistoryTable.indexPathForCell(sender as! UITableViewCell)
+        let cell = dataViewController.objectAtIndexPath(indexPath!) as! Vet
+        
+        dest.add = cell.address
+        dest.com = cell.comment
+        
+        
+    }
     
     
     //reload tableview if data changed.
