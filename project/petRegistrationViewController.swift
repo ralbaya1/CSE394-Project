@@ -32,7 +32,7 @@ class petRegistrationViewController: UIViewController ,NSFetchedResultsControlle
     var dataViewController: NSFetchedResultsController = NSFetchedResultsController()
     
     
-    var context: NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    //var context: NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     func getFetchResultsController() -> NSFetchedResultsController
     {
@@ -59,44 +59,42 @@ class petRegistrationViewController: UIViewController ,NSFetchedResultsControlle
         
         if  let fetchResults = (try? context.executeFetchRequest(fetchRequest)) as? [Pet]
         {
-            
-            
-            let x = fetchResults.count
-            
-            
-            
-            print(x)
-            if x != 0 {
-                
-                let petInfo = fetchResults[0]
-                petInfo.picture = petImage.image
-                petInfo.name = petInfo.name
-                
-                petImage.image = UIImage(data: petInfo.picture!  as NSData)
-                petName.text = petInfo.name
-            }
-            else
+            // if there is a
+            if let name = petName.text
             {
-                self.performSegueWithIdentifier("firstTimeUser", sender: nil)
-            }
-            
-        }
-        
-        if let name = petName.text
-        {
-            let ent = NSEntityDescription.entityForName("Pet", inManagedObjectContext: self.context)
-            
-            let newItem = Pet(entity: ent!, insertIntoManagedObjectContext: self.context)
-            
-            newItem.name = name
-            
-            let imageData = UIImagePNGRepresentation(petImage.image!)
-            
-            newItem.picture = imageData
-            
-            do {
-                try context.save()
-            } catch _ {
+                let x = fetchResults.count
+                // if the fetched is not empty update the image
+                if x != 0 {
+                
+                    let petInfo = fetchResults[0]
+                    petInfo.name = name
+                    //convert image to NSData then save to coredata
+                    let imageNsdata = UIImagePNGRepresentation(petImage.image!)
+                    petInfo.picture = imageNsdata!
+                    do {
+                        try context.save()
+                    } catch _ {}
+                }
+                // if the coredata is empty then save as first time user and go back to homepage
+                else
+                {
+                    let ent = NSEntityDescription.entityForName("Pet", inManagedObjectContext: self.context)
+                
+                    let newItem = Pet(entity: ent!, insertIntoManagedObjectContext: self.context)
+                
+                    newItem.name = name
+                    //convert image to NSData then save to coredata
+                    let imageData = UIImagePNGRepresentation(petImage.image!)
+                
+                    newItem.picture = imageData!
+                
+                    do {
+                        try context.save()
+                    } catch _ {
+                    }
+                    // after saving go to homepage
+                    self.performSegueWithIdentifier("firstTimeUser", sender: nil)
+                }
             }
             
         }
@@ -107,8 +105,8 @@ class petRegistrationViewController: UIViewController ,NSFetchedResultsControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        petName.text = pName
-        petImage.image = pImage
+        //petName.text = pName
+        //petImage.image = pImage
         
         //let calender = NSCalendar.currentCalendar()
         //print(calender)

@@ -118,7 +118,8 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
     // When Feed button is pressed the time the pet is Feed and the
     // type and quantity are stored.
 
-    @IBAction func feed(sender: UIButton) {
+    @IBAction func feed(sender: UIButton)
+    {
         if let fType = foodType.text
         {
             let ent = NSEntityDescription.entityForName("Food", inManagedObjectContext: self.context)
@@ -127,16 +128,17 @@ class foodViewController: UIViewController ,NSFetchedResultsControllerDelegate,U
             
             newItem.type = fType
             
-            newItem.quantity = Int(quantityValue.text!)
+            newItem.quantity = Int(quantityValue.text!)!
             
             newItem.time_Eaten = NSDate()
             
-            /*if let navController = self.navigationController {
-             navController.popViewControllerAnimated(true)
-             }*/
+
             do {
                 try context.save()
             } catch _ {
+            }
+            if let navController = self.navigationController {
+                navController.popViewControllerAnimated(true)
             }
             
         }

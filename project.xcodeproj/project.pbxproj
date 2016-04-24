@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		41917C391CC27D8600B2AF27 /* GroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41917C381CC27D8600B2AF27 /* GroomViewController.swift */; };
+		419974DD1CCB820200CCF829 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419974DC1CCB820100CCF829 /* ExerciseViewController.swift */; };
+		419974DF1CCB99E600CCF829 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419974DE1CCB99E600CCF829 /* MedicineViewController.swift */; };
 		41A0AB781CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB6C1CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift */; };
 		41A0AB791CC00F8F0051DC7F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB6D1CC00F8F0051DC7F /* Exercise.swift */; };
 		41A0AB7A1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0AB6E1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		41917C381CC27D8600B2AF27 /* GroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroomViewController.swift; sourceTree = "<group>"; };
+		419974DC1CCB820100CCF829 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		419974DE1CCB99E600CCF829 /* MedicineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
 		41A0AB6C1CC00F8F0051DC7F /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Exercise+CoreDataProperties.swift"; path = "project/Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		41A0AB6D1CC00F8F0051DC7F /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = project/Exercise.swift; sourceTree = "<group>"; };
 		41A0AB6E1CC00F8F0051DC7F /* Pet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pet+CoreDataProperties.swift"; path = "project/Pet+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				B075DD821CC50FA800E9B6D9 /* petRegistrationViewController.swift */,
 				B075DD841CC59CD900E9B6D9 /* foodViewController.swift */,
 				B075DD981CC5D84400E9B6D9 /* vetVisitViewController.swift */,
+				419974DC1CCB820100CCF829 /* ExerciseViewController.swift */,
+				419974DE1CCB99E600CCF829 /* MedicineViewController.swift */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -222,6 +228,8 @@
 			files = (
 				41A0AB7B1CC00F8F0051DC7F /* Pet.swift in Sources */,
 				41A0AB7D1CC00F8F0051DC7F /* Medicine.swift in Sources */,
+				419974DD1CCB820200CCF829 /* ExerciseViewController.swift in Sources */,
+				419974DF1CCB99E600CCF829 /* MedicineViewController.swift in Sources */,
 				41A0AB831CC00F8F0051DC7F /* Food.swift in Sources */,
 				41A0AB791CC00F8F0051DC7F /* Exercise.swift in Sources */,
 				B0B1747C1CA5ED0300E75822 /* ViewController.swift in Sources */,
